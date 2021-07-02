@@ -1,4 +1,285 @@
-h1 {
-    color: red;
-    text-align: center ;
+@font-face {
+    font-family: "JF Flat Regular";
+    src: url(../fonts/JF-Flat-regular.eot);
+    font-weight:bold;
+    font-style: normal;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.custom-navbar .container .navbar-brand {
+    margin-left: 30px;
+    margin-top: 4px;
+}
+
+
+.custom-navbar .container {
+    padding: 0;
+}
+
+.custom-navbar {
+ border-bottom: 3px solid #eef0ea;
+ width: 100%;
+background-color: #fff;
+padding-top: 15px;
+padding-bottom: 15px;
+
+
+}
+/* للتعديل على حقل البحث */
+/* لتغير خصائص اختر فئه */
+.custom-form-control, .custom-btn {
+    border: 1px solid #eef0ea;
+    box-shadow: none;
+    border-radius: 2px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    padding: 6px 16px 7px 17px;
+    color: #868686;
+}
+
+.custom-navbar  .custom-form-control:focus {
+    border-color: #c2101e;
+    box-shadow: 0 0 2px 0 #c2101e;
+}
+
+.custom-btn:hover {
+    border: 1px solid #8c8c8c;
+   background-color: #d4d4d4;
+   color: #b86d07;
+}
+
+
+.categories .nav-link {
+    border-right: 0;
+    border-radius: 0;
+
+}
+
+.cdm .checkbox {
+    display: inline-block;
+    margin: 5px 5px;
+}
+
+.cdm .checkbox label input {
+    margin-left: 5px;
+}
+
+.cdm {
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 #ebebeb;
+    color: #777;
+}
+
+/* للتعديل على زر البحث */
+.search-btn {
+    background-color: #ff3956;
+    border-color: #ff3956;
+    color: #fff;
+    padding: 5px 15px 7px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 0;
+}
+
+.custom-navbar .search-btn:hover,
+.custom-navbar .search-btn:active,
+.custom-navbar .search-btn:focus,
+.custom-navbar .search-btn:active:focus,
+.custom-navbar .search-btn:active:hover {
+    background-color: #c2101e;
+    border-color: #c2101e;
+    color: #fff;
+    
+}
+
+
+
+/* للتعديل على عناصر الصفحه ul */
+.custom-navbar .navbar-nav li a.nav-link {
+    color: #555555;
+    font-size: 14px;
+    padding: 15px;
+} 
+
+.custom-navbar .navbar-nav li a.nav-link:hover {
+    color: #000;
+    
+}
+
+.custom-navbar .navbar-nav li.active a.nav-link {
+    color: #ff3956;
+    border-bottom: 1px solid #ff3956;
+    font-weight: 700;
+}
+
+.custom-navbar ul.navbar-nav {
+    margin: 0 100px;
+
+}
+
+/* لاعطاء خلفيه رماديه لعناصر القائمه */
+.custom-navbar .navbar-nav li.active:hover a.nav-link {
+
+background-color: #e7e7e7;
+
+}
+
+
+.nav-item.dropdown .dropdown-menu  {
+    left: auto;
+}
+ 
+.cdm li a:hover {
+    background-color: #ffe7ea;
+}
+
+.custom-navbar a.btn-icon {
+    padding: 5px 10px 4px;
+    color: #777;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    border-radius: 2px;
+    margin-right: 15px;
+    margin-left:10px ;
+    font-size: 12px;
+
+}
+
+.custom-navbar .navbar-nav li:last-of-type {
+    margin-top: 8px;
+}
+
+
+.custom-navbar .btn-icon:hover {
+    color: #000000;
+    background-color: #bfbfbf;
+}
+
+/* ********************************************************* */
+
+
+/* 2المنتجات المميزه */
+
+.cr .col-12 {
+   padding-right: 0px; 
+   padding-left: 0px;
+}
+
+
+#carousel-featured {
+    background-color: #f7f8f3;
+    height: 400px;
+    padding-top: 25px;
+}
+
+
+/* لضبط ارتفاع الصوره */
+#carousel-featured .carousel-item img {
+    height: 375px;
+}
+
+/* لاضافات اطار وتعديلا ىعلى معلومات العنصر */
+
+#carousel-featured .product-details {
+    border: 1px solid #ddddd8;
+    padding: 20px;
+    position: relative;
+    top: 50px;
+    height: 200px;
+}
+
+/* لتغير موضع التخفيضات  */
+#carousel-featured .product-details .product-category {
+    border:1px solid #ddddd8 ;
+    padding: 10px;
+    position: absolute;
+    top: -6px;
+    right: -14px;
+    background-color: #f7f8f3;
+}
+
+/* للتعديل على الزر */
+
+#carousel-featured .product-details .custom-btn-primary {
+    color: #f8ad47;
+    border-color: #f8ad47;
+    background-color: transparent;
+    padding: 9px 25px;
+    margin-top: 15px;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+/* للتعديل على ملصق الخصم */
+
+.sale {
+    background-color: #53ccd7;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+}
+
+.sale.large {
+    height: 60px;
+    width: 60px;
+    font-size: 130%;
+    padding: 45px;
+    border-radius: 50%;
+    left: -15px;
+    top:-15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-25deg);
+    line-height: 90%;
+    flex-direction: column;
+}
+
+
+#carousel-featured .product-details  .sale.large span {
+    font-size: 14px;
+}
+
+#carousel-featured .product-details h1 {
+    font-weight: 700;
+    font-size: 175%;
+    margin-top: 18px;
+}
+
+
+/* لضبط مكان الصور */
+
+.ccip {
+    top: 235px;
+    right: 44%;
+}
+
+
+
+/* للتعديل على حجم الصور واضافة خلفيه واطار */
+.ccip img {
+    height: 75px;
+    width: 75px;
+    background-color: #fff;
+    border:2px solid #ddddd8;
+    margin-right: 2px;
+}
+
+
+.ccip img.active {
+    border-color: #f8ad47;
+}
+
+
+/* للتعديل على الاسهم */
+
+#carousel-featured .carousel-control-prev,
+#carousel-featured .carousel-control-next{
+    color: #868686;
+    font-size: 20px;
 }

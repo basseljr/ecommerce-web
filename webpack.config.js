@@ -41,25 +41,41 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader'
+                    {
+                       loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../',
+                        },
+                    },
+
+                    'css-loader',
                 ]
 
             },
-            // {
-            //     test: /\.(png|svg|jpe?g|gif)$/,
-            //     use: [
-            //         {
-            //             loader: 'file-loader',
-            //             options: {
-            //                 name: '[name].[ext]',
-            //                 outputpath: 'images',
-            //             }
-            //         }
+         
 
-            //     ]
-            // }
+            {
+                test: /\.(svg|eot|woff|woff2|ttf)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputpath: 'fonts',
+                            esModule: false,
+                        }
+                    }
 
+                ]
+            },
+            
+            {
+                test: require.resolve("jquery"),
+                loader: "expose-loader",
+                options: {
+                  exposes: ["$", "jQuery"],
+                },
+              },
 
 
 
@@ -75,5 +91,6 @@ module.exports = {
         new OptimizeCssAssetsPlugin({}),
 
     ],
+    
 
 };

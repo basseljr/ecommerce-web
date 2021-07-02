@@ -3,5 +3,10 @@ import './css/style.css';
 import 'bootstrap'
 import 'jQuery/dist/jQuery.min'
 import 'popper.js/dist/popper.min'
+import '@fortawesome/fontawesome-free/js/all.min'
 
-console.log("ddd")
+
+$(function () {
+    
+    $('[data-toggle=tooltip]').tooltip()
+});
